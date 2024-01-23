@@ -4,14 +4,14 @@ namespace MagicVilla.Modelos.Dto
 {
     public class VillaCreateDto
     {
-       
-        [Required]
+
+        [Required(ErrorMessage = "Nombre es Requerido")]
         [MaxLength(30)]
         public string Nombre { get; set; }
 
         public string Detalle { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Tarifa es Requerida")]
         public double Tarifa { get; set; }
 
         public int Ocupantes { get; set; }

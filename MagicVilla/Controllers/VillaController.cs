@@ -64,7 +64,7 @@ namespace MagicVilla.Controllers
             return _response;
         }
 
-        [HttpGet("id:int", Name = "GetVilla")]
+        [HttpGet("{id:int}", Name = "GetVilla")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -119,7 +119,7 @@ namespace MagicVilla.Controllers
 
                 if (await _villaRepo.Obtener(v => v.Nombre.ToLower() == createdto.Nombre.ToLower()) != null)
                 {
-                    ModelState.AddModelError("NombreExiste", "La Villa con ese nombre ya existe");
+                    ModelState.AddModelError("ErrorMessages", "La Villa con ese nombre ya existe");
                     return BadRequest(ModelState);
                 }
 
@@ -151,7 +151,7 @@ namespace MagicVilla.Controllers
 
         }
 
-        [HttpDelete("id:int")]
+        [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -189,7 +189,7 @@ namespace MagicVilla.Controllers
 
         }
 
-        [HttpPut("id:int")]
+        [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateVilla(int id, [FromBody] VillaUpdateDto updateDto)
@@ -219,7 +219,7 @@ namespace MagicVilla.Controllers
 
         }
 
-        [HttpPatch("id:int")]
+        [HttpPatch("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdatePartialVilla(int id, JsonPatchDocument<VillaUpdateDto> patchDto)

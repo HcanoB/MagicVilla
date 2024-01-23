@@ -42,7 +42,7 @@ namespace MagicVilla.Controllers
             try
             {
                 _logger.LogInformation("Obtener Numeros villas");
-                IEnumerable<NumeroVilla> numeroVillaList = await _numeroVillaRepo.ObtenerTodos();
+                IEnumerable<NumeroVilla> numeroVillaList = await _numeroVillaRepo.ObtenerTodos(incluirPropiedades: "Villa");
                 //return Ok(_mapper.Map<IEnumerable<VillaDto>>(villaList));
                 _response.Resultado = _mapper.Map<IEnumerable<NumeroVillaDto>>(numeroVillaList);
                 _response.StatusCode = HttpStatusCode.OK;
@@ -56,7 +56,7 @@ namespace MagicVilla.Controllers
             return _response;
         }
 
-        [HttpGet("id:int", Name = "GetNumeroVilla")]
+        [HttpGet("{id:int}", Name = "GetNumeroVilla")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -73,7 +73,7 @@ namespace MagicVilla.Controllers
                     return BadRequest(_response);
                 }
 
-                var numeroVilla = await _numeroVillaRepo.Obtener(v => v.VillaNo == id);
+                var numeroVilla = await _numeroVillaRepo.Obtener(v => v.VillaNo == id, incluirPropiedades: "Villa");
 
                 if (numeroVilla == null)
                 {
@@ -111,12 +111,12 @@ namespace MagicVilla.Controllers
 
                 if (await _numeroVillaRepo.Obtener(v => v.VillaNo == createdto.VillaNo) != null)
                 {
-                    ModelState.AddModelError("NombreExiste", "El número de Villa ya existe");
+                    ModelState.AddModelError("ErrorMessages", "El número de Villa ya existe");
                     return BadRequest(ModelState);
                 }
                 if (await _villaRepo.Obtener(v => v.Id == createdto.VillaId) == null)
                 {
-                    ModelState.AddModelError("Clave foranea", "El id de Villa no existe");
+                    ModelState.AddModelError("ErrorMessages", "El id de Villa no existe");
                     return BadRequest(ModelState);
                 }
 
@@ -148,7 +148,7 @@ namespace MagicVilla.Controllers
 
         }
 
-        [HttpDelete("id:int")]
+        [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -186,7 +186,7 @@ namespace MagicVilla.Controllers
 
         }
 
-        [HttpPut("id:int")]
+        [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateNumeroVilla(int id, [FromBody] NumeroVillaUpdateDto updateDto)
@@ -196,12 +196,13 @@ namespace MagicVilla.Controllers
                 if (updateDto == null || id != updateDto.VillaNo)
                 {
                     _response.StatusCode = HttpStatusCode.BadRequest;
+                    ModelState.AddModelError("ErrorMessages", "bjeto es nulo o el id es distinto al villano!");
                     _response.IsExitoso = false;
                     return BadRequest(_response);
                 }
                 if (await _villaRepo.Obtener(v => v.Id == updateDto.VillaId) == null)
                 {
-                    ModelState.AddModelError("ClaveForanea", "El Id de la villa no existe!");
+                    ModelState.AddModelError("ErrorMessages", "El Id de la villa no existe!");
                     return BadRequest(_response);
 
                 }
@@ -209,6 +210,7 @@ namespace MagicVilla.Controllers
                 NumeroVilla modelo = _mapper.Map<NumeroVilla>(updateDto);
 
                 await _numeroVillaRepo.Actualizar(modelo);
+
                 _response.StatusCode = HttpStatusCode.NoContent;
                 return Ok(_response);
             }
@@ -222,7 +224,7 @@ namespace MagicVilla.Controllers
 
         }
 
-        [HttpPatch("id:int")]
+        [HttpPatch("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdatePartialVilla(int id, JsonPatchDocument<VillaUpdateDto> patchDto)
