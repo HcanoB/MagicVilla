@@ -81,3 +81,4 @@ D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla\obj\Debug\net7.0
 D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla\obj\Debug\net7.0\MagicVilla.pdb
 D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla\obj\Debug\net7.0\MagicVilla.genruntimeconfig.cache
 D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla\obj\Debug\net7.0\ref\MagicVilla.dll
+D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
