@@ -9,6 +9,8 @@ namespace MagicVilla.Repositorio.IRepositorio
 
         Task<LoginResponseDTO> Login(LoginRequestDTO loginRequestDto);
 
-        Task<Usuario> Registrar(RegistroRequestDTO registroRequestDto);
+        //Task<Usuario> Registrar(RegistroRequestDTO registroRequestDto
+        //
+        Task<UsuarioDto> Registrar(RegistroRequestDTO registroRequestDto);
     }
 }

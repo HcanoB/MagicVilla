@@ -226,3 +226,8 @@ D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\ne
 D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\HC\Capacitacion\Udemy\Web APIs (NET 7)\MagicVilla\MagicVilla_Web\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
