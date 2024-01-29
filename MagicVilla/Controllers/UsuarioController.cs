@@ -1,15 +1,14 @@
 ﻿using MagicVilla.Modelos;
 using MagicVilla.Modelos.Dto;
 using MagicVilla.Repositorio.IRepositorio;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Reflection;
 
 namespace MagicVilla.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersionNeutral]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepositorio _usuarioRepo;

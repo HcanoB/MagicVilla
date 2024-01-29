@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OeAYKholoYqR7+fzK0ZKKPP+1BLFD4S8f6Cabtt+XG3lSU1Ntw3hB+tDCaT+Fgrd359AfnD+uTU2vXSaCCgEHQ==",
+  "dgSpecHash": "dcoLEvx+Y1ttUVpw4YlgorzrKw/Fguy1ByGwo6wx1AhzVJtQv30vM/QZ1yDhNU2bItY01E3R2gZQJKUBGQ+5Cw==",
   "success": true,
   "projectFilePath": "D:\\HC\\Capacitacion\\Udemy\\Web APIs (NET 7)\\MagicVilla\\MagicVilla\\MagicVilla.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\hcano\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.0\\microsoft.aspnetcore.authentication.jwtbearer.7.0.0.nupkg.sha512",
     "C:\\Users\\hcano\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.0\\microsoft.aspnetcore.jsonpatch.7.0.0.nupkg.sha512",
     "C:\\Users\\hcano\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.0.nupkg.sha512",
+    "C:\\Users\\hcano\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\hcano\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\hcano\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.13\\microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
     "C:\\Users\\hcano\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\hcano\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
